@@ -1,4 +1,8 @@
+ruby '2.0.0'
 source 'https://rubygems.org'
+
+# https://devcenter.heroku.com/articles/rails4-getting-started
+gem 'rails_12factor', group: :production
 
 gem 'rails'         , '4.0.0'
 gem 'pg'
