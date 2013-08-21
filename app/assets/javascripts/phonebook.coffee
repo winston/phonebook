@@ -22,6 +22,7 @@ window.Phonebook =
           <td data-test-name=contact_name>#{data.name}</td>
           <td data-test-name=contact_phone>#{data.phone}</td>
           <td>
+            <i class='icon-trash'></i>
             <a class='delete' data-method='delete' data-remote='true' data-test-name='delete_link' href='/contacts/#{data.id}' rel='nofollow'>Delete</a>
           </td>
         </tr>

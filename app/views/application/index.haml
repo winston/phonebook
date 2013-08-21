@@ -13,7 +13,9 @@
           %tr{"data-test-name" => "contact"}
             %td{"data-test-name" => "contact_name"}= contact.name
             %td{"data-test-name" => "contact_phone"}= contact.phone
-            %td= link_to "Delete", contact_path(contact), method: :delete, remote: true, class: "delete", "data-test-name" => "delete_link"
+            %td
+              = fa_icon "trash"
+              = link_to "Delete", contact_path(contact), method: :delete, remote: true, class: "delete", "data-test-name" => "delete_link"
 
   .span6
     %h4 Add a Contact

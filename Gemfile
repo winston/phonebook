@@ -10,9 +10,9 @@ gem 'coffee-rails'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-# gem 'turbolinks'
 
 gem 'bootstrap-sass'
+gem "font-awesome-rails"
 
 gem 'simple_form', '3.0.0.rc'
 
