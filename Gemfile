@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # https://devcenter.heroku.com/articles/rails4-getting-started
 gem 'rails_12factor', group: :production
+gem 'unicorn'
 
 gem 'rails'         , '4.0.0'
 gem 'pg'
@@ -22,18 +23,6 @@ gem 'simple_form'   , '3.0.0.rc'
 gem 'best_in_place' , github: "bernat/best_in_place", ref: "rails-4"
 
 gem 'rails_utils'
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
 
 group :development, :test do
   gem 'spring'
