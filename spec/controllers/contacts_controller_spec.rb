@@ -1,6 +1,18 @@
 require "spec_helper"
 
 describe ContactsController do
+  describe "#index" do
+    def do_request
+      get :index, format: :csv
+    end
+
+    it "returns CSV of all contacts" do
+      Contact.stub(:to_csv)
+      do_request
+      Contact.should have_received(:to_csv)
+    end
+  end
+
   describe "#create" do
     def do_request
       post :create, contact: params, format: :json

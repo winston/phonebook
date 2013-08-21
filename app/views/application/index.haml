@@ -18,3 +18,7 @@
       = f.input_field :name , class: "input-medium", "data-test-name" => "contact_name_field"
       = f.input_field :phone, class: "input-medium", "data-test-name" => "contact_phone_field"
       = f.submit "Add Contact", class: "btn", "data-disable-with" => "Adding.."
+
+    %hr
+
+    = link_to "Download Contacts", contacts_path(format: :csv), class: "btn btn-success"

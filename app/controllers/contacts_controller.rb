@@ -1,6 +1,12 @@
 class ContactsController < ApplicationController
   respond_to :json
 
+  def index
+    respond_to do |format|
+      format.csv { render text: Contact.to_csv }
+    end
+  end
+
   def create
     respond_with Contact.create(model_params)
   end
