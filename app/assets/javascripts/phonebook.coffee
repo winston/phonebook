@@ -23,6 +23,7 @@ window.Phonebook =
 
   construct_contact_html: (contact) ->
     new_contact_html = $("#contacts tbody tr.template").clone()
+    new_contact_html.removeClass("template")
 
     $(".name .best_in_place", new_contact_html).attr("id", "best_in_place_contact_#{contact.id}_name")
     $(".name .best_in_place", new_contact_html).attr("data-url", "/contacts/#{contact.id}")
