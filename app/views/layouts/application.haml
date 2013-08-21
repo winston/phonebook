@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Phonebook
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-static-top
+      .navbar-inner
+        .container
+          = link_to "Phonebook", root_path, class: "brand"
+    .container
+      .alert.hide{"data-test-name" => "alert"}
+      = yield
+
+    = javascript_include_tag "application"
+    = javascript_initialization

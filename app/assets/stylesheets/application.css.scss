@@ -1,0 +1,14 @@
+@import "bootstrap";
+
+.container {
+  position: relative;
+}
+
+.alert {
+  position: absolute;
+  top: -20px;
+  left: 70px;
+
+  box-sizing: border-box;
+  width: 800px;
+}
