@@ -10,6 +10,18 @@
   top: -20px;
   left: 70px;
 
-  box-sizing: border-box;
   width: 800px;
+  box-sizing: border-box;
+}
+
+.best_in_place {
+  display: block;
+  width: 168px;
+
+  .form_in_place {
+    input {
+      width: 90%;
+      margin-bottom: 0;
+    }
+  }
 }

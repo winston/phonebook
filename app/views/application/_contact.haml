@@ -1,0 +1,6 @@
+%tr{class: html_class, "data-test-name" => "contact"}
+  %td.name= best_in_place contact, :name, data: {"test-name" => "contact_name"}
+  %td.phone= best_in_place contact, :phone, data: {"test-name" => "contact_phone"}
+  %td
+    = fa_icon "trash"
+    = link_to "Delete", contact_path(contact), method: :delete, remote: true, class: "delete", "data-test-name" => "delete_link"

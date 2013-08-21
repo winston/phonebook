@@ -12,9 +12,10 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
 gem 'bootstrap-sass'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
-gem 'simple_form', '3.0.0.rc'
+gem 'simple_form'   , '3.0.0.rc'
+gem 'best_in_place' , github: "bernat/best_in_place", ref: "rails-4"
 
 gem 'rails_utils'
 

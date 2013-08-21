@@ -2,6 +2,11 @@
 class HomePage < SitePrism::Page
   class ContactSection < SitePrism::Section
     element :name       , "[data-test-name=contact_name]"
+    element :name_field , "[data-test-name=contact_name] input"
+
+    element :phone      , "[data-test-name=contact_phone]"
+    element :phone_field, "[data-test-name=contact_phone] input"
+
     element :delete_link, "[data-test-name=delete_link]"
   end
 
@@ -25,8 +30,22 @@ class HomePage < SitePrism::Page
   end
 
   def delete_contact(name)
-    contact = contacts.find { |contact| contact.name.text == name }
+    contact = find_contact(name)
     contact.delete_link.click
   end
-end
 
+  def edit_contact(name, options)
+    contact = find_contact(name)
+    contact.name.click
+    contact.name_field.set options[:name]
+
+    # Blur field
+    contact.phone.click
+  end
+
+  private
+
+  def find_contact(name)
+    contacts.find { |contact| contact.name.text == name }
+  end
+end
